@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: fe-conta
+  name: fe-conta
+spec:
+  template:
+    metadata:
+      labels:
+        app: fe-conta
+    spec:
+      containers:
+        - name: fe-conta
+          image: fernandoe/fe-conta:latest
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+            requests:
+              cpu: 500m
+              memory: 256Mi
