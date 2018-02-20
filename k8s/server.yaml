@@ -1,10 +1,11 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
+  name: fe-conta
   labels:
-    app: fe-conta-server
-  name: fe-conta-server
+    app: fe-conta
 spec:
+  replicas: 3
   template:
     metadata:
       labels:
@@ -16,10 +17,3 @@ spec:
           ports:
             - containerPort: 8000
               protocol: TCP
-          resources:
-            limits:
-              cpu: 1000m
-              memory: 512Mi
-            requests:
-              cpu: 500m
-              memory: 256Mi

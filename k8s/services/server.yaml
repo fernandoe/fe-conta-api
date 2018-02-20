@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: fe-conta
   labels:
-    app: fe-conta-server
-  name: fe-conta-server
+    app: fe-conta
 spec:
+  type: LoadBalancer
   ports:
     - port: 80
-      protocol: TCP
       targetPort: 8000
   selector:
-    app: fe-conta-server
-  type: LoadBalancer
+    app: fe-conta
