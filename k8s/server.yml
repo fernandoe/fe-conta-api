@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: fe-conta
-          image: fernandoe/fe-conta:latest
+          image: fernandoe/fe-conta:bootstrap
           ports:
             - containerPort: 5000
               protocol: TCP
