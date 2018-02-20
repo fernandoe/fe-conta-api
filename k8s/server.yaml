@@ -2,19 +2,19 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: fe-conta
-  name: fe-conta
+    app: fe-conta-server
+  name: fe-conta-server
 spec:
   template:
     metadata:
       labels:
-        app: fe-conta
+        app: fe-conta-server
     spec:
       containers:
-        - name: fe-conta
-          image: fernandoe/fe-conta:bootstrap
+        - name: fe-conta-server
+          image: fernandoe/fe-conta-server:bootstrap
           ports:
-            - containerPort: 5000
+            - containerPort: 8000
               protocol: TCP
           resources:
             limits:
