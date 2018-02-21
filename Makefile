@@ -20,4 +20,7 @@ minikube-start:
 	minikube start --docker-env http_proxy=http://15.85.195.199:8088 --docker-env https_proxy=http://15.85.195.199:8088 --docker-env no_proxy=192.168.99.0/24
 
 minikube-open:
-  minikube service fe-conta
+	minikube service fe-conta
+
+watch-get-pods:
+	watch kubectl get pods
