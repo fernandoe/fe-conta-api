@@ -24,3 +24,9 @@ minikube-open:
 
 watch-get-pods:
 	watch kubectl get pods
+
+machine-create:
+	docker-machine create --driver virtualbox default
+
+machine-default:
+	eval $(docker-machine env default)

@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql:5.7.21
+    volumes:
+      - ~/workspace/docker-volumes/mysql-fe-conta:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: fe-conta
+  web:
+    build: .
+    volumes:
+      - ./src:/app
+    ports:
+      - "8000:8000"
