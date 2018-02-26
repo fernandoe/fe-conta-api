@@ -1,5 +1,5 @@
 docker-build:
-	docker build -t fernandoe/fe-conta-server .
+	docker build  --build-arg http_proxy=http://15.85.195.199:8088 --build-arg https_proxy=http://15.85.195.199:8088  -t fernandoe/fe-conta-server .
 
 docker-run:
 	docker run --rm -p 80:8000 -d fernandoe/fe-conta-server

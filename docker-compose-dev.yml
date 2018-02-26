@@ -12,8 +12,11 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: fe-conta
   web:
-    build: .
+#    build: .
+    image: fernandoe/fe-conta-server
     volumes:
       - ./src:/app
+    links:
+      - mysql:mysql
     ports:
-      - "8000:8000"
+      - "9000:8000"
