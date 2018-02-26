@@ -1,0 +1,65 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql:5.7.21
+    volumes:
+      - ~/workspace/docker-volumes/mysql-fe-conta:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: fe-conta
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+
+#   wordpress:
+#     depends_on:
+#       - db
+#     image: wordpress:latest
+#     ports:
+#       - "8000:80"
+#     restart: always
+#     environment:
+#       WORDPRESS_DB_HOST: db:3306
+#       WORDPRESS_DB_USER: wordpress
+#       WORDPRESS_DB_PASSWORD: wordpress
+#volumes:
+#    dbdata:
+
+#mysql:
+#  restart: always
+#  build: ./docker/mysql/
+#  volumes:
+#    - ~/workspace/docker-volumes/ortopedica-mysql:/var/lib/mysql
+#  environment:
+#    - MYSQL_DATABASE=ortopedica
+#    - MYSQL_ROOT_PASSWORD=password
+#
+#web:
+#  restart: always
+#  build: .
+#  expose:
+#    - "8000"
+#  ports:
+#    - "8000:8000"
+#  links:
+#    - mysql:mysql
+#  volumes:
+#    - ~/workspace/docker-volumes/ortopedica-statics:/www/static
+#    - ./source:/app
+#  environment:
+#    - DJANGO_SETTINGS_MODULE=server.settings.docker
+#  command: gunicorn server.wsgi:application -w 2 -b :8000
+##  command: python manage.py runserver 0.0.0.0:8000
+#
+#nginx:
+#  restart: always
+#  build: ./docker/nginx/
+#  ports:
+#    - "80:80"
+#  volumes:
+#    - ~/workspace/docker-volumes/ortopedica-statics:/www/static
+#  links:
+#    - web:web

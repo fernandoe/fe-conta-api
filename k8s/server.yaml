@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: fe-conta
+  labels:
+    app: fe-conta
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: fe-conta-server
+    spec:
+      containers:
+        - name: fe-conta-server
+          image: fernandoe/fe-conta-server:bootstrap
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          imagePullPolicy: Always
