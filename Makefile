@@ -33,13 +33,13 @@ machine-default:
 	eval $(docker-machine env default)
 
 django-migrate:
-	docker-compose -f docker-compose-dev.yml run web python manage.py migrate
+	docker-compose run web python manage.py migrate
 
 django-createsuperuser:
-	docker-compose -f docker-compose-dev.yml run web python manage.py createsuperuser
+	docker-compose run web python manage.py createsuperuser
 
 compose-build:
-	docker-compose -f docker-compose-dev.yml build web
+	docker-compose build web
 
 compose-up:
-	docker-compose -f docker-compose-dev.yml up
+	docker-compose up
