@@ -1,5 +1,6 @@
 docker-build:
-	docker build  --build-arg http_proxy=http://15.85.195.199:8088 --build-arg https_proxy=http://15.85.195.199:8088  -t fernandoe/fe-conta-server .
+#	docker build  --build-arg http_proxy=http://15.85.195.199:8088 --build-arg https_proxy=http://15.85.195.199:8088 -t fernandoe/fe-conta-server .
+	docker build -t fernandoe/fe-conta-server .
 
 docker-run:
 	docker run --rm -p 80:8000 -d fernandoe/fe-conta-server
@@ -30,3 +31,15 @@ machine-create:
 
 machine-default:
 	eval $(docker-machine env default)
+
+django-migrate:
+	docker-compose -f docker-compose-dev.yml run web python manage.py migrate
+
+django-createsuperuser:
+	docker-compose -f docker-compose-dev.yml run web python manage.py createsuperuser
+
+compose-build:
+	docker-compose -f docker-compose-dev.yml build web
+
+compose-up:
+	docker-compose -f docker-compose-dev.yml up

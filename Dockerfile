@@ -14,7 +14,8 @@ ADD ./docker/run.sh /run.sh
 ADD ./src /app
 
 WORKDIR /app
-ENTRYPOINT ["/run.sh"]
+
+CMD ["/run.sh"]
 
 # Use this to build MySQL-Client
 # https://github.com/gliderlabs/docker-alpine/issues/181
