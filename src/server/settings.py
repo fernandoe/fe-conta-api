@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+
+    'fe_core',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,5 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+AUTH_USER_MODEL = 'fe_core.User'

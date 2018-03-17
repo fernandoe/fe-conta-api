@@ -10,6 +10,12 @@ compose-build:
 compose-up:
 	docker-compose up
 
+compose-migrate:
+	docker-compose run web python manage.py migrate
+
+compose-createsuperuser:
+	docker-compose run web python manage.py createsuperuser
+
 #docker-run:
 #	docker run --rm -p 80:8000 -d fernandoe/fe-conta-server
 #
@@ -39,10 +45,4 @@ compose-up:
 #
 #machine-default:
 #	eval $(docker-machine env default)
-#
-#django-migrate:
-#	docker-compose run web python manage.py migrate
-#
-#django-createsuperuser:
-#	docker-compose run web python manage.py createsuperuser
 #
