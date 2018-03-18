@@ -1,20 +1,26 @@
 docker-build:
 	docker build -t fernandoe/fe-conta-server:local .
 
-docker-bash:
-	docker run -it --rm fernandoe/fe-conta-server:local /bin/sh
+compose-bash:
+	docker-compose run --rm conta /bin/sh
 
 compose-build:
-	docker-compose build web
+	docker-compose build conta
 
 compose-up:
-	docker-compose up
+	docker-compose up conta
+
+compose-stop:
+	docker-compose stop
+
+compose-rm:
+	docker-compose rm
 
 compose-migrate:
-	docker-compose run web python manage.py migrate
+	docker-compose run --rm conta python manage.py migrate
 
 compose-createsuperuser:
-	docker-compose run web python manage.py createsuperuser
+	docker-compose run --rm conta python manage.py createsuperuser
 
 #docker-run:
 #	docker run --rm -p 80:8000 -d fernandoe/fe-conta-server

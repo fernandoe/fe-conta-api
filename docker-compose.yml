@@ -2,38 +2,31 @@ version: '3'
 
 services:
 
-  mysql:
+  mysql-conta:
     image: mysql:5.7.21
     volumes:
-      - ortopedica-mysql:/var/lib/mysql
-    ports:
-      - "3306:3306"
+      - mysql-conta:/var/lib/mysql
     restart: always
-    networks:
-      - ortopedica
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: fe-conta
 
-  web:
+  conta:
     build: .
     volumes:
       - ./requirements.txt:/requirements.txt
       - ./src:/app
-    links:
-      - mysql:mysql
     ports:
       - "9000:8000"
-    networks:
-      - ortopedica
     environment:
-       DATABASE_URL: mysql://root:password@mysql:3306/fe-conta
+       DATABASE_URL: mysql://root:password@mysql-conta:3306/fe-conta
     depends_on:
-      - mysql
+      - mysql-conta
 
 volumes:
-  ortopedica-mysql:
-  ortopedica-python:
+  mysql-conta:
 
 networks:
-  ortopedica:
+  default:
+    external:
+      name: fe
