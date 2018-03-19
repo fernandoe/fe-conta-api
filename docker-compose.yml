@@ -25,6 +25,8 @@ services:
 
 volumes:
   mysql-conta:
+    external:
+      name: mysql-conta
 
 networks:
   default:
