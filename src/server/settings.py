@@ -144,3 +144,8 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 AUTH_USER_MODEL = 'fe_core.User'
+
+import datetime
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1)
+}
