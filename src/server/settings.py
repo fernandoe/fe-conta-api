@@ -147,5 +147,6 @@ AUTH_USER_MODEL = 'fe_core.User'
 
 import datetime
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1)
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    'JWT_PAYLOAD_HANDLER': 'fe_jwt.utils.fe_jwt_payload_handler'
 }

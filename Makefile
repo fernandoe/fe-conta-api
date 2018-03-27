@@ -22,6 +22,9 @@ compose-migrate:
 compose-createsuperuser:
 	docker-compose run --rm conta python manage.py createsuperuser
 
+install-local-dependencies:
+	pip install -e ../django-fe-jwt/
+
 #docker-run:
 #	docker run --rm -p 80:8000 -d fernandoe/fe-conta-server
 #
