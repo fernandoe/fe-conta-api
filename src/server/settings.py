@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'fe_core',
+    'fe_conta',
 ]
 
 MIDDLEWARE = [
