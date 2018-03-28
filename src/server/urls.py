@@ -8,5 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', obtain_jwt_token),
     path('verify/', verify_jwt_token),
-    path('me/', MEAPIView.as_view(), 'me'),
+    path('me', MEAPIView.as_view(), name='me'),
 ]
