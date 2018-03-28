@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'fe_core',
+    'fe_conta',
 ]
 
 MIDDLEWARE = [
@@ -85,12 +86,6 @@ WSGI_APPLICATION = 'server.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-
-
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.config()
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -148,5 +143,6 @@ AUTH_USER_MODEL = 'fe_core.User'
 import datetime
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
-    'JWT_PAYLOAD_HANDLER': 'fe_jwt.utils.fe_jwt_payload_handler'
+    'JWT_PAYLOAD_HANDLER': 'fe_jwt.utils.fe_jwt_payload_handler',
+    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
