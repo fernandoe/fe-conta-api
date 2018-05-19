@@ -8,3 +8,4 @@
 - Update Dockerfile file
 - Add travis-ci, requires and coveralls badges
 - Format requirements.txt file
+- Install and configure the pytest library
