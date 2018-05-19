@@ -1,6 +1,6 @@
 -e git+https://github.com/fernandoe/django-fe-core.git@release/0.4.0#egg=django_fe_core
 -e git+https://github.com/fernandoe/django-fe-jwt.git@release/0.0.1#egg=django_fe_jwt
-dj-database-url==0.4.2
+dj-database-url==0.5.0
 django-cors-headers==2.2.0
 Django==2.0.3
 djangorestframework-jwt==1.11.0
