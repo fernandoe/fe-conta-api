@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: conta-api-dev-fernandoe-com-tls
   issuerRef:
-    name: ortopedica-letsencrypt
+    name: issuer-letsencrypt
   commonName: conta-api.dev.fernandoe.com
   dnsNames:
     - conta-api.dev.fernandoe.com

@@ -16,8 +16,8 @@ fi
 sed -ie 's/0.0.1/'"${TAG}"'/g' k8s/dev/conta-api/3.conta-api-deployment.yml
 
 # Change domain name
-sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/conta-api/5.conta-api-certificate.yml
-sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/conta-api/6.conta-api-ingress.yml
+sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/conta-api/4.certificate.yml
+sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/conta-api/5.ingress.yml
 
 ./kubectl apply --recursive -f ./k8s/dev/ -n ${NAMESPACE}
 
