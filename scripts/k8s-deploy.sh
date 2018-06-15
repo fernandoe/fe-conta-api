@@ -13,11 +13,11 @@ if ! ./kubectl get namespace "${NAMESPACE}"; then
 fi
 
 # Change version
-sed -ie 's/0.0.1/'"${TAG}"'/g' k8s/dev/conta-api/3.conta-api-deployment.yml
+sed -ie 's/0.0.1/'"${TAG}"'/g' k8s/dev/service/2.deployment.yml
 
 # Change domain name
-sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/conta-api/4.certificate.yml
-sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/conta-api/5.ingress.yml
+sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/service/4.certificate.yml
+sed -ie 's/conta-api\.dev\.fernandoe\.com/'"${NAMESPACE}"'.dev.fernandoe.com/g' k8s/dev/service/5.ingress.yml
 
 ./kubectl apply --recursive -f ./k8s/dev/ -n ${NAMESPACE}
 
