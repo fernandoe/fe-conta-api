@@ -5,6 +5,7 @@ services:
 
 env:
   global:
+  - PROJECT_NAME=fe-conta-api
   - secure: cENfok7I0t8/rv76uptYLzdRujhcrkoJ3lIo5L+Q2iFrCVaS2wL0k+UVrfGH0Vo3UexD9e3y/7OR9ClS2eniB7eYO0tSlCoknqxBP1jkQpqjKFaPPtNL3OAnOlGdJY3xSqBznJuVrZjh9sfJQMnO3ckcxexLgmwUo00e2PdppOGboEDm89ulIRz5axgu3mWFTBF9+s03JITMc+UaSPZ2ckJmBXCwdvIAA6Eortb8tnofM4CVCFkDGRZmWd8pdXASY1RASWeD5JchmUL94+AC98Es90ze1M29nIwzjgWIS3xjJa+er10e0k+mM4NhXPApSY2J0I+NWKdDMYcb8fzldHx4ytO6SPJO/3mDW94LhH68sTOc2kpryCK0e2B9bGau3uEP4Rh6a6xZp1ql6qYVykpz9hlM5owDSSnlJB9KVQVedpBozbrQ96R5PKd3cmHuP9+RaYbpDzXfVoFGjPByBD4vued4lQQUp77OxKOp55XQMbxkZiH5LY11k1Lx1BSZCdZ+GeBmxWRJzjPosu8o/Qg6w5YC8LA3DS/ATXriLnq5vv9FlgB+fXv6afuEULM0GYXel5fO6Z5Gh8brMxK7VGlG8khmNMB+DasjuOHzWNFuz/FIRSDy8nz2FutNpL1vUqamm14wnWr5L3NNuohaADq/0cxzM3F3LdNgmy22ydc=
   - secure: nl7XN+nFjCHJ2FyP6eL+p5MsJw1SuSAf1VTVOQSsLPxHUYvqGVGg16HouGibHh5xs5NV1dGeMSCSZeM8j/jyg2y05zRz6qqC5eTAAzLrtE7SodhS7bK/p/Tksw2MJAbp4Et/7kea/8wVbGQGRxs7dNwT9T2AKKZPM1k+ycR06OR4U7TIaVOVXmFGX8BMnRzpCZSc5+5qJ/mHB3n5OSJrliTd4VcmI40QPvOewkmzZzIel39nWaJ0T0s48OSbxgDtwIRwsOm2LmUUzJx1htVEaNUIzd3hWbfGRFhfeYXZU+zbMqBtDhGD++Ai2Sx2s4QPIpXWB2iMo7U+TeYVh3kytfmCbVzkuS9xywZfUnNJ5/Avfn7cPqyuO9hX7oDZ4/iPYJcs/jhH0FdZZ4EogQOSHoR8tATsAh44kmYc17ALzmCbkEHfpVb8dPGtEk4czGmG5zkd82s1B6MRb7TrviNC5k8hLOonaUeSrWfdsRWHma+Xl6FkTAhM0u0TS3SClgMnj6gJACq4Xq7Ee0VK2PHswQjHiWzUVHbU1Sa97DOhFqEhSSkuUbNnyVvx7iuIOEM/kxq1+l5LBIvItKvJiM/anDPTNumV5JReu2ZfoBUWlXb2e+DB7RYSoUn0n4gopka3q8gZ8GZ41JRgaLed2E/2+38GYvzrRc/lsHgla1lAE18=
   - secure: a7wNQa8YPfS20WhySuLX4R5tYERW2ZksJE//4M0Z1PBdggDy2gpljvyFiGNWrkKKC+FKkkd6YlcDUIFYOZVZLf0tylSGHMLJ2FhoI9nz5k4OFMA1He2lI9SxrGRQqfyojZHfDKJzp+Op64cmcFZk5lxC7sRPmjombupfhyiL+mQ3gGdRioBjQ8KiOBtW6RUcSTtLBPP9hT10Pal3f/zvQhCTbhZFV1N2jw/AY39gIlv1NgtmnYKvtnadm4t3MrTGbDfDrxqHmHPLE4C3+yabHR9HGOHlq2oItK+P72subbvGLsAIFSQY0wfG0P6Jp/5DUdZtYBPRdEDhaDaitv4GKy2f/T1mEa8YClVQmlEdDu4v7nxevhWBwzR9+hBX/JVoPtgdl9DvaCnCCP3oJz0aCR2qt0jU2e6/pV0U2jX+HxQoNhHwVL4QfegY6Lil1WTzAHkJ1meV3mQX1jO1d/QHQmpeaxagYmI4+m0lTpui/q1w3gXOERp8ZtZQ5pPnTvf5yuhBPILx8FKemMrmhHys68mdrFbLkiVDiE0p2Wbs7GdHW35VJupeDNB/zmuoFA+5pFWYKziwWIuyl4Z9/U4Tc+9KcqTFMYRbng92WwqmR7xeWXfrxJA7F5pAH4jjDQRA6ZnASVZ89cagclTSo2j+Q4R/qyT2+88LircH2E3N2KM=
@@ -15,25 +16,26 @@ env:
   - secure: SidX5mKasn5cbsOdCs4s1z1oUmZpiavVytqOim0S+29i/UmlwYS9CJ8aO8sRdlKTtUg1x3b9miSEGi5mhCno9JeUg5k2qzX8oZ8h0OUAunW9XGhmXi+/aOb4AgqsDomaCm3dQLLfBO8Enw5zPR/ejeYfLwfq06NlgxFC92vE+gCRBzTKSq9zrjyhZgpy3DKQfZ12+mZIfep7pPjcT+LKUZNW01piG5Bxma7N9/mWp63UUF25pX1cdMVzTkGiIYwSo8tHF9+KlD28PTDz/jS9aBbJdjTFX0/eK4WaKRRwtXDjvUPluGay3tD/2I4fnCk+9q6SoXY8t76PHlJ1OXN/BMBDWTDwEEwMkmpFqH2yFx8/4SFSpLrQbZH8tgJcf5PXSxwXkDwBZ/RNQ0mBRvPkCogtihp2yP745IJjseJa0a0azLQtOCCx97R5gMxpXcjFc7DUyXZqwcZjOOZ40dw+iMgbvtcL0CALAz1F1SsNKblHPh3ghfwHYzHS/eL0zKJhUh4qGY4rxcvCylhsSu7YWHk9OSe29a3gJqPMJBYAv1a6XfIIXf2QbSQ6aJqY8mXuNLWQk4MHNMmruCKZa8ZHXSpf1Hxyq+AouZ8Qzh09W+vUvY17pHH+2/AQrEes5FrRscylFKKD48DxTR+Niqw8j5vZgNbjYK/A3nT4FUfYyrM=
 
 before_install:
-- echo "$DOCKER_PASS" | docker login -u $DOCKER_USER --password-stdin
+  - echo "$DOCKER_PASS" | docker login -u $DOCKER_USER --password-stdin
 
 install:
-- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
-- docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
+  - docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
 
 script:
-- make travis.test
+  - make ci.test
 
 after_success:
 - docker push $TRAVIS_REPO_SLUG
 
 deploy:
-  skip_cleanup: true
-  provider: script
-  script:
-  - "./scripts/deploy.sh"
-  on:
-    tags: true
-    branch:
-    - master
-    - "/(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/"
+  # deploy releases branch to their own namespaces
+  - provider: script
+    script: ./scripts/k8s-deploy.sh
+    on:
+      all_branches: true
+  # deploy master to production
+  - provider: script
+    script: ./scripts/deploy.sh
+    on:
+      branch: master

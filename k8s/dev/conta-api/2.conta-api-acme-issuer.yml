@@ -1,0 +1,11 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Issuer
+metadata:
+  name: ortopedica-letsencrypt
+spec:
+  acme:
+    server: https://acme-v01.api.letsencrypt.org/directory
+    email: "fer.esp@gmail.com"
+    privateKeySecretRef:
+      name: ortopedica-letsencrypt
+    http01: {}
