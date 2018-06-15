@@ -4,7 +4,7 @@ metadata:
   name: ortopedica-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
-spec:ortopedica
+spec:
   rules:
     - host: conta-api.dev.fernandoe.com
       http:

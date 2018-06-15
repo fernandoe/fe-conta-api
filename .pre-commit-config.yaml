@@ -4,3 +4,4 @@ repos:
     hooks:
       - id: flake8
       - id: end-of-file-fixer
+      - id: check-yaml
