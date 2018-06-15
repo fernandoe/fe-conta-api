@@ -9,3 +9,4 @@
 - Add travis-ci, requires and coveralls badges
 - Format requirements.txt file
 - Install and configure the pytest library
+- Add codefactor.io, codacy.com and codebeat.co
