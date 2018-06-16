@@ -36,6 +36,8 @@ deploy:
       all_branches: true
   # deploy master to production
   - provider: script
-    script: ./scripts/deploy.sh
+    script: ./scripts/k8s-deploy-production.sh
     on:
-      branch: master
+      tags: true
+      branch:
+        - "/(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/"
