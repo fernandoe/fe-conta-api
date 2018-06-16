@@ -15,7 +15,7 @@ class TestMEAPIView(APITestCase):
         response = self.client.get(reverse('me'))
         # print("STATUS CODE: %s - RESPONSE: %s" % (response.status_code, response.content))
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
-        self.assertEquals(response.data['detail'], 'Authentication credentials were not provided.')
+        self.assertEquals(response.data['detail'], 'As credenciais de autenticação não foram fornecidas.')
 
     def test_get_full(self):
         user = UserFactory()

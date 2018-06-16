@@ -1,29 +1,18 @@
-TRAVIS_REPO_SLUG ?= fernandoe/fe-conta-server
+TRAVIS_REPO_SLUG ?= fernandoe/fe-conta-api
 TAG ?= local
 
 build:
 	docker build -t '${TRAVIS_REPO_SLUG}:${TAG}' .
 
-compose-bash:
-	docker-compose run --rm conta /bin/sh
+test:
+	cd src; pytest -s
 
-compose-build:
-	docker-compose build conta
-
-compose-up:
-	docker-compose up conta
-
-compose-stop:
-	docker-compose stop
-
-compose-rm:
-	docker-compose rm
-
-compose-migrate:
-	docker-compose run --rm conta python manage.py migrate
-
-compose-createsuperuser:
-	docker-compose run --rm conta python manage.py createsuperuser
-
-install-local-dependencies:
-	pip install -e ../django-fe-jwt/
+ci.test:
+	docker run --rm \
+		-e TRAVIS_JOB_ID='${TRAVIS_JOB_ID}' \
+		-e TRAVIS_BRANCH='${TRAVIS_BRANCH}' \
+		-e COVERALLS_REPO_TOKEN='${COVERALLS_REPO_TOKEN}' \
+		-e CODECOV_ENV='${CODECOV_ENV}' \
+		-e TRAVIS_COMMIT='${TRAVIS_COMMIT}' \
+		-e TRAVIS='${TRAVIS}' \
+		-it '${TRAVIS_REPO_SLUG}:${TAG}' /bin/sh -c "env; pytest -s; coveralls --verbose;"
