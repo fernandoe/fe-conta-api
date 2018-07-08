@@ -1,6 +1,12 @@
 # Release Notes
 
-## 0.0.1-DEV
+## 0.0.2-DEV
+
+- Return the container version
+
+
+
+## 0.0.1
 
 - Initial project
 - Add LICENSE and README.md files
