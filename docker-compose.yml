@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7.21
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: conta
+
+  api-conta:
+    container_name: api-conta-single
+    build: .
+    ports:
+      - "9000:8000"
+    volumes:
+      - ./src:/app
+    depends_on:
+      - mysql
+    environment:
+      DJANGO_SETTINGS_MODULE: 'server.settings.docker'
+      DATABASE_URL: mysql://root:password@mysql:3306/conta
+      VERSION: 0.0.2
+    stdin_open: true
+    tty: true
+
+volumes:
+  mysql-data:

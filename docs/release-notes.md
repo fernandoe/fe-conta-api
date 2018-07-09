@@ -1,6 +1,13 @@
 # Release Notes
 
-## 0.0.1-DEV
+## 0.0.2
+
+- Add django-fe-version app to return the container version
+- Add docker-compose file to test locally
+
+
+
+## 0.0.1
 
 - Initial project
 - Add LICENSE and README.md files

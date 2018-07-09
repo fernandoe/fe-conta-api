@@ -16,3 +16,9 @@ ci.test:
 		-e TRAVIS_COMMIT='${TRAVIS_COMMIT}' \
 		-e TRAVIS='${TRAVIS}' \
 		-it '${TRAVIS_REPO_SLUG}:${TAG}' /bin/sh -c "env; pytest -s; coveralls --verbose;"
+
+single-docker-migrate:
+	docker exec -i api-conta-single python manage.py migrate
+
+docker-createsuperuser:
+	docker exec -it api-conta-single python manage.py createsuperuser

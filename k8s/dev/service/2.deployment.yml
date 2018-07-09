@@ -34,3 +34,5 @@ spec:
             value: 'server.settings.docker'
           - name: DATABASE_URL
             value: mysql://root:password@mysql:3306/conta
+          - name: VERSION
+            value: 0.0.1

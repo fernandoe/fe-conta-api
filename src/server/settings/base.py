@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'fe_core',
     'fe_conta',
+    'fe_version',
 ]
 
 MIDDLEWARE = [
