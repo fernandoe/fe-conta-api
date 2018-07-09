@@ -31,7 +31,7 @@ after_success:
 deploy:
   # deploy releases branch to their own namespaces
   - provider: script
-    script: ./scripts/k8s-deploy.sh
+    script: ./scripts/k8s-deploy-development.sh
     on:
       all_branches: true
   # deploy master to production
