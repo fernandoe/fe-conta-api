@@ -1,5 +1,11 @@
 # Release Notes
 
+## 0.0.3-DEV
+
+- 
+
+
+
 ## 0.0.2
 
 - Add django-fe-version app to return the container version
