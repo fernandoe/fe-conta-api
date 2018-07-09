@@ -1,8 +1,9 @@
 # Release Notes
 
-## 0.0.2-DEV
+## 0.0.2
 
-- Return the container version
+- Add django-fe-version app to return the container version
+- Add docker-compose file to test locally
 
 
 
