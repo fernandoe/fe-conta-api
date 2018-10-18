@@ -4,6 +4,18 @@ TAG ?= local
 build:
 	docker build -t '${TRAVIS_REPO_SLUG}:${TAG}' .
 
+compose-build:
+	docker-compose build
+
+compose-up:
+	docker-compose up
+
+compose-migrate:
+	docker-compose exec api-conta python manage.py migrate
+
+compose-createsuperuser:
+	docker-compose exec api-conta python manage.py createsuperuser
+
 test:
 	cd src; pytest -s
 
