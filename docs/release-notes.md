@@ -1,11 +1,14 @@
 # Release Notes
 
+## 0.0.3-DEV
+
+- Upgrade base docker container to fernandoe/docker-python:3.7.0-alpine3.8
+- Upgrade requirements.txt
+
 ## 0.0.2
 
 - Add django-fe-version app to return the container version
 - Add docker-compose file to test locally
-
-
 
 ## 0.0.1
 

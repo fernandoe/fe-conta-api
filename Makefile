@@ -22,3 +22,6 @@ single-docker-migrate:
 
 docker-createsuperuser:
 	docker exec -it api-conta-single python manage.py createsuperuser
+
+requirements:
+	docker run --rm fernandoe/fe-conta-api:local pip freeze -r /requirements.txt
